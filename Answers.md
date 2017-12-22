@@ -1,4 +1,4 @@
-1. Not sure, to be honest. I joined in after this lesson.
+1. Not sure, to be honest. I joined in after the Processes lesson. My guess would be B.
 
 
 2. Taking a guess here:
@@ -12,4 +12,4 @@
 3. On my computer, a printf call averages to 592 ns, whereas a write call averages to 3699 ns.
 
 
-4.
+4. The reason printf is faster than write is because printf buffers its output in memory and only calls write when its buffer is full.
