@@ -3,13 +3,14 @@
 
 int **alloc_2d(int rows, int cols)
 {
-  int i, ** arr = malloc(rows * sizeof(int *));
+	int i, **arr = malloc(rows * sizeof(int *));
 
-  for (i = 0; i < sizeof(arr); i++) {
-    arr[i] = malloc(cols * sizeof(int));
-  }
+	for (i = 0; i < sizeof(arr); i++)
+	{
+		arr[i] = malloc(cols * sizeof(int));
+	}
 
-  return arr;
+	return arr;
 }
 
 int main(void)
@@ -20,12 +21,12 @@ int main(void)
 	my_array[2][3] = 3490;
 
 	// The same array access could be made with pointer arithmetic:
-	*(*(my_array+2)+3) = 3490;
+	*(*(my_array + 2) + 3) = 3490;
 
 	// By the C spec, the array notation and pointer arithmetic notation
 	// are 100% equivalent.
-	
+
 	printf("my_array[2][3] = %d\n", my_array[2][3]);
 
-  return ** my_array;
+	return **my_array;
 }
